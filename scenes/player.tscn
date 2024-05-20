@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdg4xnods7jba"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_rrp6c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8f8sr"]
+radius = 0.3
+height = 1.8
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_rrp6c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8f8sr")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.534639, 0)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -82.0
+offset_top = 17.0
+offset_right = -19.0
+offset_bottom = 54.0
+grow_horizontal = 0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
